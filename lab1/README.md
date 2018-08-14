@@ -1,3 +1,12 @@
+# Lab 1
+
+The objective of this lab is to retrieve data from the internet and run an analysis on it.
+Use the following URL to download a small graduate admission dataset, and build a linear
+regression to predict admission probability.
+
+https://drive.google.com/uc?export=download&id=1-NRy3Q2AewrnZcenGmf1x48vvj2bxqeb
+
+
 # Introduction to Python
 
 Python is a great language for working with data. It's been adopted by
@@ -55,8 +64,8 @@ print(list_of_things[2])
 
 # Here is a dict (a.k.a. a map)
 dictionary = {
-    "key_1" : 1,
-    "key_2" : "value"
+	"key_1" : 1,
+	"key_2" : "value"
 }
 
 # This will print the value for "key_1" (1)
@@ -81,38 +90,38 @@ age = 62
 
 # Here is the EQUALITY oeprator
 if first_name == "Bill":
-    # This will print
-    print("My name is Bill")
+	# This will print
+	print("My name is Bill")
 else:
-    print("My name is not Bill")
+	print("My name is not Bill")
 
 # Here is the NOT operator
 # Can also be written as `last_name != "Gates"`
 if not last_name == "Gates":
-    print("My last name is not Gates")
+	print("My last name is not Gates")
 else:
-    # This will print
-    print("My last name is Gates")
+	# This will print
+	print("My last name is Gates")
 
 # This is the AND operator
 if first_name == "Bill" and last_name == "Gates":
-    # This will print
-    print("My name is Bill Gates")
+	# This will print
+	print("My name is Bill Gates")
 
 # This is the OR operator
 if first_name == "Bill" or first_name == "Jill":
-    # This will print
-    print("My name is either Bill or Jill")
+	# This will print
+	print("My name is either Bill or Jill")
 
 # Here is less than and greater than
 if age < 70 and age > 59:
-    # This will print
-    print("I am in my 60s")
+	# This will print
+	print("I am in my 60s")
 
 # Here is less or equal to and greater than or equal to
 if age <= 69 and age >= 60:
-    # This will print
-    print("Once again, I am in my 60s")
+	# This will print
+	print("Once again, I am in my 60s")
 ```
 
 #### Loops
@@ -127,8 +136,8 @@ program prints the digits 0-9
 my_number = 0
 
 while my_number < 10:
-    print(my_number)
-    my_number += 1
+	print(my_number)
+	my_number += 1
 ```
 
 The `for loop` iterates over a collection or range. When iterating over a list, the
@@ -138,21 +147,21 @@ keys at each iteration:
 ```Python
 # Here we print the digits 0-9 using a range
 for i in range(0, 10):
-    print(my_number)
+	print(my_number)
 
 # Here we iterate over a list and print each value
 my_list = [1, 2, 3, 4, 5]
 for value in my_list:
-    print(value)
+	print(value)
 
 # Here we iterate over the keys in a dict and
 # print the associated values
 my_dict = {
-    "key_1": 1,
-    "key_2": 2
+	"key_1": 1,
+	"key_2": 2
 }
 for key in my_dict:
-    print(my_dict[key])
+	print(my_dict[key])
 ```
 
 Keep in mind that Python provides two handy keywords to manage loops:
@@ -166,14 +175,14 @@ The following program prints all even numbers up to 100:
 my_number = -1
 
 while True:
-    my_number += 1
+	my_number += 1
 
-    if my_number % 2 == 0:
-        print(my_number)
-        continue
+	if my_number % 2 == 0:
+		print(my_number)
+		continue
 
-    if my_number > 99:
-        break
+	if my_number > 99:
+		break
 ```
 
 ### Functions
@@ -193,26 +202,26 @@ define the function, and then we call it:
 
 ```Python
 """
-    "def" indicates that we want to make a function
+	"def" indicates that we want to make a function
 
-    "evens" is the name of the function
+	"evens" is the name of the function
 
-    Function arguments go between the parentheses next to
-    the function name. Here this is "lower_limit" and "upper_limit"
+	Function arguments go between the parentheses next to
+	the function name. Here this is "lower_limit" and "upper_limit"
 """
 def evens(lower_limit, upper_limit):
-    # Create an empty list
-    even_numbers = []
+	# Create an empty list
+	even_numbers = []
 
-    # Iterate over the given range
-    for x in range(lower_limit, upper_limit):
-        if x % 2 == 0:
-            # If the number is even, add it to the list
-            even_numbers.append(x)
+	# Iterate over the given range
+	for x in range(lower_limit, upper_limit):
+		if x % 2 == 0:
+			# If the number is even, add it to the list
+			even_numbers.append(x)
 
-    # The return keyword indicates what the function should
-    # send back to its caller
-    return even_numbers
+	# The return keyword indicates what the function should
+	# send back to its caller
+	return even_numbers
 
 
 # Call the function
@@ -233,7 +242,7 @@ Let's rewrite the "evens" function in one line:
 
 ```Python
 def evens(lower_limit, upper_limit):
-    return [x for x in range(lower_limit, upper_limit) if x % 2 == 0]
+	return [x for x in range(lower_limit, upper_limit) if x % 2 == 0]
 
 
 result = evens(0, 10)
@@ -244,29 +253,29 @@ This yields the same exact result as the original "evens" function. Let's break 
 
 1. First we indicate that we are going to create a list by using brackets 
 
-    [...]
+	[...]
 
 2. Then we start using a for loop, since we want to iterate over a range:
 
-    [ for x in range(lower_limit, upper_limit) ]
+	[ for x in range(lower_limit, upper_limit) ]
 
 3. We also need to indicate that we just want to take `x` from the loop:
 
-    [ x for x in range(lower_limit, upper_limit) ]
+	[ x for x in range(lower_limit, upper_limit) ]
 
-    We are essentially saying "Take `x` for each `x` in this range"
+	We are essentially saying "Take `x` for each `x` in this range"
 
 4. Now apply the condition because we only want even numbers:
 
-    [ x for x in range(lower_limit, upper_limit) if x % 2 == 0 ]
+	[ x for x in range(lower_limit, upper_limit) if x % 2 == 0 ]
 
 What if we wanted to format `x` as a string instead of just taking the value?
 
-    [ "Even - " + str(x) for x in range(lower_limit, upper_limit) if x % 2 == 0 ]
+	[ "Even - " + str(x) for x in range(lower_limit, upper_limit) if x % 2 == 0 ]
 
 We simply applied a transformation to `x` up front. Now this gives:
 
-    ['Even - 0', 'Even - 2', 'Even - 4', 'Even - 6', 'Even - 8']
+	['Even - 0', 'Even - 2', 'Even - 4', 'Even - 6', 'Even - 8']
 
 
 
@@ -304,8 +313,8 @@ The more "pythonic" way of doing it that closes the file automatically goes as f
 
 ```Python
 with open("./hello.txt") as fin:
-    contents = fin.read()
-    print(contents)
+	contents = fin.read()
+	print(contents)
 ```
 
 Once the program exits the `with` block, the file is closed.
@@ -314,9 +323,9 @@ Now let's print it to a new file:
 
 ```Python
 with open("./hello.txt") as fin:
-    contents = fin.read()
-    with open("another_file.txt", "w") as fout:
-        fout.write(contents)
+	contents = fin.read()
+	with open("another_file.txt", "w") as fout:
+		fout.write(contents)
 ```
 
 Now the file "another_file.txt" will read "Hello World!". Notice that we needed to
@@ -342,9 +351,9 @@ import requests
 response = requests.get("https://en.wikipedia.org/wiki/Python_(programming_language)")
 
 if response.status_code >= 200 and response.status_code < 300:
-    print(response.text)
+	print(response.text)
 else:
-    print("Oh no! Something went horribly wrong!")
+	print("Oh no! Something went horribly wrong!")
 ```
 
 Here is the program step by step:
@@ -372,63 +381,63 @@ CSV_URL = "https://drive.google.com/uc?export=download&id=1fHySh9SSdM-WQgkqEQpKJ
 
 # Function Definitions
 def get_csv():
-    """
-        get_csv
+	"""
+		get_csv
 
-        Attempt 10 times to fetch the csv file before terminating program.
+		Attempt 10 times to fetch the csv file before terminating program.
 
-        Return raw csv data on success
-    """
-    attempts = 1
-    data = None
-    while data is None and attempts <= 10:
-        print(">> Fetching CSV file (Attempt #" + str(attempts) + ") ...")
-        r = requests.get(CSV_URL)
-        status_code = r.status_code
+		Return raw csv data on success
+	"""
+	attempts = 1
+	data = None
+	while data is None and attempts <= 10:
+		print(">> Fetching CSV file (Attempt #" + str(attempts) + ") ...")
+		r = requests.get(CSV_URL)
+		status_code = r.status_code
 
-        if status_code >= 200 and status_code < 300:
-            data = r.text
+		if status_code >= 200 and status_code < 300:
+			data = r.text
 
-        attempts += 1
-    
-    if data is None:
-        print(">> Could not download csv file.")
-        exit(1)
+		attempts += 1
+	
+	if data is None:
+		print(">> Could not download csv file.")
+		exit(1)
 
-    print(">> CSV retreived.")
-    return data
+	print(">> CSV retreived.")
+	return data
 
 
 def csv_to_json(csv_data):
-    """
-        csv_to_json
+	"""
+		csv_to_json
 
-        Takes in csv_data and converts it to a file object. The file object
-        is then converted to a csv reader to iterate elegantly over rows.
+		Takes in csv_data and converts it to a file object. The file object
+		is then converted to a csv reader to iterate elegantly over rows.
 
-        Rows are converted to JSON objects.
+		Rows are converted to JSON objects.
 
-        Returns JSON formatted csv data
-    """
-    print(">> Converting CSV to JSON ...")
-    json_data = []
+		Returns JSON formatted csv data
+	"""
+	print(">> Converting CSV to JSON ...")
+	json_data = []
 
-    fin = io.StringIO(csv_data)
-    reader = csv.reader(fin)
+	fin = io.StringIO(csv_data)
+	reader = csv.reader(fin)
 
-    # Extract headers first
-    headers = reader.__next__()
+	# Extract headers first
+	headers = reader.__next__()
 
-    # Convert each row to JSON
-    for row in reader:
-        row_obj = {}
-        for index, value in enumerate(headers):
-            row_obj[value] = row[index]
+	# Convert each row to JSON
+	for row in reader:
+		row_obj = {}
+		for index, value in enumerate(headers):
+			row_obj[value] = row[index]
 
-        json_data.append(row_obj)
+		json_data.append(row_obj)
 
-    # Pretty Print and return the JSON
-    return json.dumps(json_data, indent=2)
+	# Pretty Print and return the JSON
+	return json.dumps(json_data, indent=2)
 
 
 # Execution starts here
@@ -437,7 +446,7 @@ json_data = csv_to_json(csv_data)
 
 print(">> Writing data to './output.json' ...")
 with open("./output.json", "w") as fout:
-    fout.write(json_data)
+	fout.write(json_data)
 
 ```
 
