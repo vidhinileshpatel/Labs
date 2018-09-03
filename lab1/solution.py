@@ -30,14 +30,16 @@ def prepare_data(data, independent_var_index, test_lower_limit, test_upper_limit
 
 def run_regression(data, independent_var_index, test_window_size=0.2, plot=False):
     num_windows = math.floor(1 / test_window_size)
-    print(num_windows)
 
-    for i in range(num_windows):
+    for i in range(0, num_windows):
+        l = int(len(data) * i * test_window_size)
+        u = int(len(data) * (i+1) * test_window_size)
+        print(l, u)
         train_X, train_Y, test_X, test_Y = prepare_data(
             data,
             independent_var_index,
-            int(len(data.columns) * 0.8),
-            int(len(data.columns) * 1.0)
+            l,
+            u
         )
 
         regr = linear_model.LinearRegression()
