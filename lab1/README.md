@@ -1,10 +1,28 @@
 # Lab 1
 
+Lab one will cover basic Python literacy, tools, and algorithms.
+
+# Lab
+
 The objective of this lab is to retrieve data from the internet and run an analysis on it.
-Use the following URL to download a small graduate admission dataset, and build a linear
+Use the following URLs to download a small graduate admission dataset, and build a linear
 regression to predict admission probability.
 
+Training data:
 https://drive.google.com/uc?export=download&id=1-NRy3Q2AewrnZcenGmf1x48vvj2bxqeb
+
+Application Data: `TBD`
+
+Here are roughly the steps you will want to take:
+
+1. Download all of the data.
+2. Prepare the data, separate independent and dependent variables and training and test sets.
+3. Use the scikit-learn linear regression library found
+[here](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
+to fit a line to the given data.
+4. Do this for each independent variable and cross validation.
+5. Apply the best coefficient to application data set.
+6. Write your results to a JSON file.
 
 
 # Introduction to Python
@@ -18,7 +36,7 @@ focus on three fundamental processes:
 2. Doing useful things with the data
 3. Getting data out of the program
 
-All code can be run with Python 3.x
+All code should be run with Python 3.x
 
 
 ## Basic Python Literacy
@@ -450,3 +468,52 @@ with open("./output.json", "w") as fout:
 
 ```
 
+## Common Data Science Tools
+
+There are a ton of common data science tools that you can draw from
+when using Python. These are mostly found in the form of libraries, which are
+just bundes of code that other people wrote so you don't have to. Reusability
+is one of the most powerful features of programming languages, and it's how
+we can build things like nueral networks on a whim.
+
+Many languages come equipped with a package manager so that you can easily
+acquire these libraries of code: Python's is called `pip`.  If you haven't
+already try installing a library with it.  Example: `pip install requests`.
+
+
+### Anaconda
+
+The Anaconda Python Distribution is an open source Python distribution that
+comes equipped with many of the core data science libraries that you will 
+end up using.
+
+To find out more, checkout out 
+[this post](https://opensource.com/article/18/4/getting-started-anaconda-python).
+
+
+### Numpy
+
+Numpy boasts that it is "fundamental package for scientific computing with Python"
+and they are pretty much right. It is a library that allows the quick and easy 
+construction and manipulation of scientific data structures, notably matrices.
+
+Find out more [here](http://www.numpy.org/).
+
+
+### Pandas
+
+Pandas is in the same ballpark as Numpy, in fact it relies on the Numpy library
+for its underlying architecture, but they are differences, and some programmers
+prefer one or the other. It is simply a high performance data structure and
+analysis library.
+
+Check it out [here](https://pandas.pydata.org/).
+
+
+### Scikit-Learn
+
+Scikit-Learn is an extremely accessible Python interface for machine learning
+algorithms. It makes it terrifyingly easy to whip up non trivial algorithms
+like Support Vector Machines and Non-negative Matrix Factorizations.
+
+Check it out [here](http://scikit-learn.org/stable/).
