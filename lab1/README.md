@@ -11,7 +11,8 @@ regression to predict admission probability.
 Training data:
 https://drive.google.com/uc?export=download&id=1-NRy3Q2AewrnZcenGmf1x48vvj2bxqeb
 
-Application Data: `TBD`
+Application Data:
+https://drive.google.com/uc?export=download&id=1OevU8V0tyhF9Sfxs_DzPqz1jBdg4FZBE
 
 Here are roughly the steps you will want to take:
 
