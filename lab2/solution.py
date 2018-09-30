@@ -5,6 +5,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 import pandas as pd
 import numpy as np
+import requests
+import io
 
 classification_map = {
     "STAR":     1,
@@ -13,11 +15,15 @@ classification_map = {
 }
 
 def load_data():
-    data = pd.read_csv("./sky.csv")
+    data = pd.read_csv(
+        io.StringIO(
+            requests.get(
+                "https://drive.google.com/uc?export=download&id=1c3d3YkQtK99iPUEdxE2FaP0GvTXWP5IT"
+            ).text
+        )
+    )
     split_index = int(len(data) * 0.8)
     target_col = len(data.columns) - 1
-
-
 
     all_X = np.array([x[1:target_col] for x in data.values])
     all_Y = np.array([ classification_map[x[target_col]]  for x in data.values])
