@@ -5,7 +5,6 @@ Lab 4 addresses scraping dynamic websites.
 # Lab
 
 
-
 # Things to Know
 
 ## Dynamic Websites
@@ -42,7 +41,7 @@ assume that something happens when we click the button.  As it happens
 
 The most popular way of bending a browser to our will is a library called Selenium.
 Selenium is an open source automation framework that is widely used for Quality
-Assurance and less widely, but equally as successfully used for data scraping.
+Assurance and less widely, but equally as successfully, used for data scraping.
 
 Selenium ships with a number of browsers than can be used including Chrome and Firefox,
 but we want to use Tor.
@@ -52,4 +51,12 @@ and this [tutorial](https://realpython.com/modern-web-automation-with-python-and
 
 
 ## Tor
+
+Tor is a browser that has some unique properties. Notably, it relays all requests through a
+network of volunteer servers (more than 7000 of them are active).  This makes the requests quite
+untraceable and creates a platform of anonymity.  For example, if I send a request to your server
+from my apartment in New York and it goes through Tor, it will look to you like I am in South Africa.
+
+Tor is the most popular way of perusing the dark web, and it is a great way of scraping under
+the radar.
 

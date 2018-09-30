@@ -10,7 +10,7 @@ For this lab, you will be using the NBA statistics website:
 https://stats.nba.com/players/
 
 Starting at the above link, extract the top 5 players under Three Pointers Made
-and navigate to their profile page, and from there to their tradition splits page.
+and navigate to their profile page, and from there to their traditional splits page.
 Then, extract their overall statistics from 2017-2018.
 
 Save all of this data into a `pandas` DataFrame such that each record is a one of the five
@@ -58,7 +58,7 @@ html = requests.get("https://en.wikipedia.org/wiki/Buffalo_buffalo_Buffalo_buffa
 
 soup = BeautifulSoup(html)
 
-# Pretty print the HTML
+# Pretty print the HTML to see what it looks like
 print(soup.prettify())
 
 # Print the title of the page
