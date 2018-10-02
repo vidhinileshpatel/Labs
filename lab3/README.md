@@ -54,7 +54,11 @@ The following program requests and HTML page, then extracts all of its links.
 from bs4 import BeautifulSoup
 import requests
 
-html = requests.get("https://en.wikipedia.org/wiki/Buffalo_buffalo_Buffalo_buffalo_buffalo_buffalo_Buffalo_buffalo").text
+headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+html = requests.get(
+    "https://en.wikipedia.org/wiki/Tor_(anonymity_network)",
+    headers=headers
+).text
 
 soup = BeautifulSoup(html)
 
@@ -69,6 +73,14 @@ print(soup.find_all('a'))
 
 ```
 
-
 Use the [BeautifulSoup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 to learn more.
+
+
+# Masquerade
+
+Notice in the above script that the request is equipped with a dictionary of headers that
+notably includes a "User-Agent" header. This effectively tells the server that we are pinging
+that we are a browser and not a script. Some servers know to reject requests that don't come from
+browsers to avoid being scraped. We just add another line of code to trump that.
+

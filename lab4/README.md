@@ -5,6 +5,8 @@ Lab 4 addresses scraping dynamic websites.
 # Lab
 
 
+
+
 # Things to Know
 
 ## Dynamic Websites

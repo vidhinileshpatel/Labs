@@ -21,8 +21,8 @@ Here are roughly the steps you will want to take:
 3. Use the scikit-learn linear regression library found
 [here](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
 to fit a line to the given data.
-4. Do this for each independent variable and cross validation.
-5. Apply the best coefficient to application data set.
+4. Do this for each independent variable and cross validate.
+5. Apply the best coefficient to the application data set.
 6. Write your results to a JSON file.
 
 
@@ -307,6 +307,11 @@ Some commons data sources are files, databases, the internet at large, and hardw
 (cameras, microphones, keyboards, etc.)  We will go over files and the internet for
 the time being.
 
+Generally, data can be found in one of the following three formats: JSON, CSV, and HTML/XML.
+JSON is extremely popular on the internet and is widely preferred over XML since
+it is more compressed and human readable. CSV is popular for storing any data that is
+tabular.  HTML is mostly found when presenting web pages (websites are just data, too.)
+
 
 ### Files
 
@@ -504,7 +509,7 @@ Find out more [here](http://www.numpy.org/).
 ### Pandas
 
 Pandas is in the same ballpark as Numpy, in fact it relies on the Numpy library
-for its underlying architecture, but they are differences, and some programmers
+for its underlying architecture, but there are differences, and some programmers
 prefer one or the other. It is simply a high performance data structure and
 analysis library.
 

@@ -1,5 +1,7 @@
 # Lab 2
 
+This lab is going to explore implementing classification models and comparing them.
+
 # Lab
 
 Use three different classifiers to classify a celestial entity as
